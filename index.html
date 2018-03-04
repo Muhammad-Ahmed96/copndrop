@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>copNdrop</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="svg-with-js/js/fontawesome-all.js"></script>
+	<style type="text/css">
+	#cop{
+		display: none;
+		transition: background-color 2s ease-out;
+	}
+	.n{
+		display: none;
+		transition: background-color 2s ease-out;
+	}
+	#drop{
+		display: none;
+		transition: background-color 2s ease-out;
+	}
+		#cop:hover{
+			color:#007bff!important;
+			background-color: white!important;
+			transition: background-color 2s ease-out;
+		}
+		.n:hover{
+			color:black!important;
+			background-color: white!important;
+			transition: background-color 2s ease-out;
+		}
+		#drop:hover{
+			color:#dc3545!important;
+			background-color: white!important;
+			transition: background-color 2s ease-out;
+		}
+		/*#awesomeness{
+			font-size: 70px;
+		}
+		#delivered{
+			font-size: 70px;
+		}*/
+		.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 500px) {
+	.truck{
+		width: 200px;
+		height: 200px;
+	}
+	#awesomeness{
+		font-size: 35px;
+	}
+	#delivered{
+		font-size: 35px;
+	}
+	#txt{
+		margin-top: 150px;
+	}
+	}
+	@media only screen and (min-width: 768px) {
+		.truck{
+		width: 300px;
+		height: 300px;
+		display: none;
+	}
+	#awesomeness{
+		font-size: 70px;
+		display: none;
+	}
+	#delivered{
+		font-size: 70px;
+		display: none;
+	}
+	#txt{
+		margin-top: 250px;
+	}
+	}
+	.parallex{
+		background-image: url('./Images/1.jpeg');
+		 height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.parallex2{
+		background-image: url('./Images/2.jpg');
+		 height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.parallex3{
+		background-image: url('./Images/3.jpeg');
+		 height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s;
+    }
+    @-webkit-keyframes animatebottom {
+        from {
+            bottom: -100px;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 0px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes animatebottom {
+        from {
+            bottom: -100px;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
+     .animate-left{
+        position: relative;
+        -webkit-animation-name: slidein;
+        -webkit-animation-duration: 2s;
+        animation-name: slidein;
+        animation-duration: 2s;
+    }
+
+    @-webkit-keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+         @-o-keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+          @keyframes slidein {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+
+
+        .animate-right{
+        position: relative;
+        -webkit-animation-name: slideout;
+        -webkit-animation-duration: 2s;
+        animation-name: slideout;
+        animation-duration: 2s;
+    }
+
+    @-webkit-keyframes slideout {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes slideout {
+           from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+         @-o-keyframes slideout {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+          @keyframes slideout {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+
+            to {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4">
+				<img src="copndrop_logo.jpeg" class="animate-bottom">
+		</div>
+		</div>
+		<div class="row" style="border:solid 1px black;border-radius: 10px">
+			<div class="col-lg-4 text-center bg-primary" style="border-radius: 10px;color:white" id="cop">
+				<h1>Cop</h1>
+			</div>
+			<div class="col-lg-4 text-center n" style="border-radius: 10px;color: white;background-color: black">
+				<h1>N</h1>
+			</div>
+			<div class="col-lg-4 text-center bg-danger" style="border-radius: 10px;color:white" id="drop">
+				<h1>Drop</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="padding: 10px;background-color: #e2e2e2;border:solid 5px black">
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<a  href="#" class="nav-link active">Home</a>
+			</li>
+			<li class="nav-item">
+				<a  href="#" class="nav-link ">Driver Screen</a>
+			</li>
+			<li class="nav-item">
+				<a  href="#" class="nav-link ">User Screen</a>
+			</li>
+			<li class="nav-item">
+				<a  href="#" class="nav-link ">Contact Us</a>
+			</li>
+			<li class="nav-item">
+				<a  href="#" class="nav-link ">Rate Us</a>
+			</li>
+		</ul>
+	</div>
+	<div class="container-fluid">
+				<!-- <font size="25"></font> -->
+				<!-- <font size="20"><strong>AWESOMENESS</strong></font> -->
+				<div class="parallex">
+					<!-- <img src="lights.jpg"> -->
+				</div>
+				<div class="centered" style="color:white;" id="txt">
+					<font size="25" id="awesomeness"><strong>AWESOMENESS</strong></font><br>
+					<font size="25" id="delivered"><strong>&nbsp;&nbsp;&nbsp;&nbsp;DELIVERED</strong></font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img src="truck.png" class="img img-responsive truck">
+				</div>		
+	</div>
+
+	<div class="row">
+		<div class="col-lg-4">
+			
+		</div>
+		<div class="col-lg-6">
+			<h1 style="font-size: 60px"><strong>About Cop N Drop</strong></h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3">
+			
+		</div>
+		<div class="col-lg-8">
+			<p>Cop N Drop is a platform that connects drivers and clients that need items picked up and delivered.</p>
+		</div>
+	</div>
+
+	<div class="parallex3">
+		
+	</div>
+	<div style="background-color: #272727;color: white" class="row">
+		<div class="col-lg-6 text-center" style="margin-top: 80px">
+			<h1>Get Our Mobile App</h1>
+			<h3>Download our Cop N Drop App from the play store for android and 
+			Apple store for IOS devices</h3>
+			<button class="btn btn-default"><i class="fab fa-apple fa-2x"></i> Apple Store</button>
+			<button class="btn btn-danger"><i class="fab fa-app-store fa-2x"></i> Google Play</button>
+		</div>
+		<div class="col-lg-6">
+			<div class="col-lg-6 offset-lg-2 col-sm-12 col-xs-12">
+				<img src="Images/mobile.png" style="height:400px;padding: 20px">
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" style="padding: 0px;">
+		<div class="parallex2" style="padding-top: 40px">
+			<div class="col-lg-4 offset-lg-4">
+				<div class="text-center">
+					<h1 style="color: white">Contact Us</h1>
+				</div>
+			
+			<form class="form" style="color: white">
+				<label>Name</label>
+				<input type="text" name="name" class="form-control">
+				<label>Email Address</label>
+				<input type="text" name="email" class="form-control">
+				<label>Message</label>
+				<textarea class="form-control" rows="8" cols="15"></textarea><br>
+				<input type="submit" name="submit" value="Send" class="btn btn-danger btn-block">
+			</form>
+		</div>
+	</div>
+
+		
+
+	</div>
+	<div style="background-color: #272727;color: white;padding-top: 40px;padding-bottom: 40px;padding-top: 20px;" class="row">
+		<div class="col-lg-4 text-center">
+			<i class="fa fa-map-marker fa-2x" style="color: red"></i><br>
+			<strong>All of Hampton Roads</strong>
+		</div>
+		<div class="col-lg-4 text-center">
+			<i class="fa fa-envelope fa-2x" style="color:green"></i><br>
+			<strong>carlos@copndrop.com</strong>
+		</div>
+		<div class="col-lg-4 text-center">
+			<i class="fa fa-phone-square fa-2x" style="color: blue"></i><br>
+			<strong>757.773.3464</strong>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+	
+			// $('#awesomeness').delay(500).queue(function(){
+			// 	$(this).css("display","block");
+	  // 			$(this).addClass("animate-bottom");
+  	// 	});
+
+			$('#cop').delay(1000).queue(function(){
+				$(this).css("display","block");
+	  			$(this).addClass("animate-left");
+  		});
+
+		$('.n').delay(1500).queue(function(){
+				$(this).css("display","block");
+	  			$(this).addClass("animate-bottom");
+  		});			
+
+  		$('#drop').delay(2000).queue(function(){
+				$(this).css("display","block");
+	  			$(this).addClass("animate-right");
+  		});
+
+  		$('#awesomeness').delay(2500).queue(function(){
+				$(this).css("display","block");
+	  			$(this).addClass("animate-bottom");
+  		});
+
+  		$('#delivered').delay(3000).queue(function(){
+				$(this).css("display","block");
+	  			$(this).addClass("animate-bottom");
+  		});
+
+  		$('.truck').delay(3500).queue(function(){
+				$(this).css("display","inline-block");
+	  			$(this).addClass("animate-bottom");
+  		});
+</script>
+</html>
